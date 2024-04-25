@@ -21,7 +21,7 @@ function Register({setRegister}) {
               "Content-type": "application/json",
             },
           };
-       let res= await axios.post("/api/register",{email,name,password},config)
+       let res= await axios.post("https://file-in-touch-api.vercel.app/api/register",{email,name,password},config)
        console.log(res);
        setRegister(false);
        window.location.reload();
