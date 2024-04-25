@@ -31,7 +31,7 @@ router.post("/api/login",async(req,res)=>{
        
         }else{
             let token=await document.generateToken();
-            return await res.cookie("jwt",token,{
+              res.cookie("jwt",token,{
                 maxAge:24*60*60*1000
             }).send({id:document._id,token});
         }
