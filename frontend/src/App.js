@@ -60,7 +60,7 @@ function App() {
     const formData = new FormData();
      console.log(userId);
     formData.append("file", fileData);
-    let res=await axios.post(`/api/uploads`,formData);
+    let res=await axios.post(`https://file-in-touch-api.vercel.app/api/uploads`,formData);
     // setUploadedData((prev)=>[res.data,...prev].sort((a,b)=>b.time-a.time ))
     // setTempUploadedData((prev)=>[res.data,...prev].sort((a,b)=>b.time-a.time ))
     setFilesToShow((prev)=>[res.data,...prev].sort((a,b)=>b.time-a.time ))
