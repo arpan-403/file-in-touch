@@ -3,9 +3,10 @@ const express=require("express");
 const app=express();
 const cors = require('cors');
 const corsOptions ={
-    origin:'https://file-in-touch.vercel.app', 
+    origin:['https://file-in-touch.vercel.app'], 
+    methods : ["POST","GET"],
     credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
+    
 }
 app.use(cors(corsOptions));
 const PORT=process.env.PORT || 5000
