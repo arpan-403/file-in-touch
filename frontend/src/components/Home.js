@@ -6,7 +6,7 @@ function Home({setShowLogin}) {
     const getUserData=async()=>{
         let document;
        try {
-        document=await axios.get("/api/isAuthenticate");
+        document=await axios.get("https://file-in-touch-api.vercel.app/api/isAuthenticate");
         setShowLogin(false)
 
        } catch (error) {
