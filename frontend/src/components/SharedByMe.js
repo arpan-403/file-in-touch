@@ -35,7 +35,7 @@ function SharedByMe({setLoginModal,setShowLogin}) {
       const getShareByMe=async()=>{
         let document;
        try {
-        document =await axios.get("/api/shareByMe");
+        document =await axios.get("https://file-in-touch-api.vercel.app/api/shareByMe");
         setShowLogin(false);
         setLoading(false);
        } catch (error) {
