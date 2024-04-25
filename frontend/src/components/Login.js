@@ -26,6 +26,7 @@ function Login({setLogin,setUserId,setRegisterModel}) {
           return;
         }
         console.log(data.data.id);
+        console.log(data.data.token);
         setUserId(data.data.id);
         setLogin(false)
         window.location.reload();
