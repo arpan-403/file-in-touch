@@ -19,7 +19,7 @@ function Login({setLogin,setUserId,setRegisterModel}) {
           console.log("in login");
           let data;
         try {
-          data=await axios.post("/api/login",{email,password},config);
+          data=await axios.post("https://file-in-touch-api.vercel.app/api/login",{email,password},config);
         } catch (error) {
           setLogin(false);
           setRegisterModel(true);
