@@ -43,7 +43,7 @@ function UploadedByMe({setLoginModal,setShowLogin}) {
         console.log(filesToShow);
         let document;
        try {
-        document=await axios.get("/api/uploadedByMe");
+        document=await axios.get("https://file-in-touch-api.vercel.app/api/uploadedByMe");
         setShowLogin(false)
         setLoading(false);
        } catch (error) {
