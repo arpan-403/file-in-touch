@@ -1,21 +1,21 @@
 require('dotenv').config()
 const express=require("express");
 const app=express();
-const cors = require('cors');
-const corsOpts = {
-  origin: '*',
+// const cors = require('cors');
+// const corsOpts = {
+//   origin: '*',
 
-  methods: [
-    'GET',
-    'POST',
-  ],
+//   methods: [
+//     'GET',
+//     'POST',
+//   ],
 
-  allowedHeaders: [
-    'Content-Type',
-  ],
-};
+//   allowedHeaders: [
+//     'Content-Type',
+//   ],
+// };
 
-app.use(cors(corsOpts));
+// app.use(cors(corsOpts));
 const PORT=process.env.PORT || 5000
 const login=require("./Routes/login");
 const isAuthenticate=require("./Routes/isAuthenticate");
