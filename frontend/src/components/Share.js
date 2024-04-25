@@ -16,7 +16,7 @@ function Share({setShareModal,imageId,fileType}) {
               "Content-type": "application/json",
             },
           };
-        let data=await axios.post("/api/share",{email,imageId,fileType},config);
+        let data=await axios.post("https://file-in-touch-api.vercel.app/api/share",{email,imageId,fileType},config);
         console.log(data);
         setShareModal(false);
     }
