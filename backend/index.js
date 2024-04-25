@@ -1,27 +1,14 @@
 require('dotenv').config()
 const express=require("express");
 const app=express();
-// const cors = require('cors');
-// const corsOpts = {
-//   origin: '*',
+const cors = require('cors');
+const corsOptions = {
+  origin: 'https://file-in-touch.vercel.app',
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+};
 
-//   methods: [
-//     'GET',
-//     'POST',
-//   ],
-
-//   allowedHeaders: [
-//     'Content-Type',
-//   ],
-// };
-
-// app.use(cors());
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-  next();
-})
+// Add CORS middleware with specific options
+app.use(cors(corsOptions));
 const PORT=process.env.PORT || 5000
 const login=require("./Routes/login");
 const isAuthenticate=require("./Routes/isAuthenticate");
